@@ -1,8 +1,10 @@
 # ctsi-mcw-deid
-NLP Software to deidentify protected health information from clinical notes.
-Jay Urbain, PhD
+NLP Software to deidentify protected health information from clinical notes.  
 
-##### 1) Use case: Read identifed records from tab-delimited file system (local host or HDFS), write deidentified tab-delimited records to file system (local host or HDFS). Runs deidentificaiton software as part of this application.
+Jay Urbain, PhD  
+jay.urbain@gmail.com
+
+##### 1) Use case: Read identified records from tab-delimited file system (local host or HDFS), write deidentified tab-delimited records to file system (local host or HDFS). Runs deidentificaiton software as part of this application.
 
 Example:
 java -jar code/ctsi_mcw_deid_Deidentification.jar data/flint/hadoop_query_1_1_short.tsv data/flint/hadoop_query_1_1_short_deid.tsv code/blacklist.txt deidentification.mcw.NamedEntityRecognitionMCW deidentification.mcw.DeidentificationRegexMCW 1000 8 george
@@ -12,7 +14,7 @@ Parameters for main class: deidentification.Deidentification
 - output_file
 - blacklist (text file for words to absolutely cross out)
 - Named entity class (provided)
-- Regulear expression class (provided)
+- Regular expression class (provided)
 - Number of records to process per thread at a time
 - Number of threads
 - george (optional parameter for george format described below)
@@ -60,3 +62,5 @@ Only search engine input format is supported
  
 - [Deidentification Web service](https://github.com/jayurbain/ctsi-mcw-deid-service.git)   
 
+### License
+"CTSI MCW Deidentification" is licensed under the GNU General Public License (v3 or later; in general "CTSI MCW Deidentification" code is GPL v2+, but "CTSI MCW Deidentification" uses several Apache-licensed libraries, and so the composite is v3+). Note that the license is the full GPL, which allows many free uses, but not its use in proprietary software which is distributed to others. For distributors of proprietary software, "CTSI MCW Deidentification" is also available from CTSI of Southeast Wisconsin under a commercial licensing You can contact us at jay.urbain@gmail.com. 
